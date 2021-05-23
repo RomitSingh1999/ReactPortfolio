@@ -1,14 +1,20 @@
 import React from 'react'
 import './layout.css'
+import Testform from '../Forms/testform'
 const Layout=(props)=>(
-    <>
-    <div>
-        This will be my layout!!
+    <div className="layout">
+        <div>
+            This will be my layout!!
+        </div>
+        
+        <main className="Content">
+            {props.children}
+        </main>
+        <Testform/>
     </div>
+
+        
     
-    <main className="Content">
-        {props.children}
-    </main>
-    </>
+    
 );
 export default Layout;

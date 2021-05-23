@@ -1,4 +1,11 @@
 .Content
 {
+
     margin-top: 20px;
+}
+.layout{
+    height:auto;
+    margin:10px;
+    box-shadow: 0px 2px 5px rgb(83, 82, 82);
+    padding: 20px;
 }

@@ -1,0 +1,25 @@
+
+.login-container{
+    background: linear-gradient(white,rgb(43, 193, 252),rgb(13, 115, 231));
+    align-items: center;
+    margin:auto;
+    min-width:300px;
+    max-width: 600px;
+    height:500px;
+    outline: none;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 2.5px 1px 5px 2px rgb(131, 130, 130);
+    
+}
+.login-container:hover{
+    box-shadow: 2px 1px 3px 1px rgb(109, 108, 108);
+}
+.input-box{
+    padding: 3px;
+    outline: none;
+    border:none;
+    background: white;
+    box-shadow: 2px 1px 3px 1px rgb(109, 108, 108);
+    border-radius: 3px;
+}

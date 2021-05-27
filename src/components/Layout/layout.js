@@ -2,7 +2,7 @@ import React from 'react'
 import './layout.css'
 import Testform from '../Forms/testform'
 const Layout=(props)=>(
-    <div className="layout">
+    <div className="Layout">
         <div>
             This will be my layout!!
         </div>
@@ -10,11 +10,8 @@ const Layout=(props)=>(
         <main className="Content">
             {props.children}
         </main>
-        <Testform/>
+        
     </div>
 
-        
-    
-    
 );
 export default Layout;

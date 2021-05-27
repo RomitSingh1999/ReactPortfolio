@@ -8,7 +8,7 @@ const Burger=(props)=>{
                 salad:2,
                 bacon:1,
                 cheese:3,
-                meat:1
+                meat:3
             }
         }
     )

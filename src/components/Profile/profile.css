@@ -1,0 +1,26 @@
+.profile-container{
+    width:100%;
+    background: linear-gradient(rgb(78, 140, 211) 40%,white);
+
+}
+
+.profile-heading{
+    margin:10px;
+    color:white;
+
+}
+.profile-items{
+    display: flex;
+    flex-direction: row;
+}
+.bg-image{
+    position: inherit;
+    background-image: url("./mountain-bg.png");
+    background-size: 60% 100%;
+}
+@media (max-width: 800px) {
+    .profile-items {
+      flex-direction: column;
+    }
+  }
+

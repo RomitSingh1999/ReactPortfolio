@@ -1,10 +1,12 @@
 import './App.css';
 import React,{useState} from 'react';
 // import Layout from './components/Layout/layout';
-// import Burger from './components/Burger/Burger';
+import Burger from './components/Burger/Burger';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home'
 import About from './components/About/About'
+import Admin from './components/Admin/Admin'
+
 // import Contact from './components/Contact/Contact'
 import Profile from './components/Profile/Profile'
 import Testform from './components/Forms/testform'
@@ -17,7 +19,7 @@ const App=(props)=>{
         const [user,setuser]=useState('')
         
         
-        const authListener=()=>{
+        
             fire.auth().onAuthStateChanged((user)=>{
                 if(user)
                 {
@@ -27,23 +29,37 @@ const App=(props)=>{
                 else
                 setuser("");
             })
-        }
+            const handlelogout=()=>{
+                fire.auth().signOut();
+            };
+        
           
         return (
             <Router>
+                <Navbar user={user} handlelogout={handlelogout}/>
             <div className = "App" >
                     
-                    <Navbar/>
+                    
                     <Switch>
                     
                         <Route path="/" exact >
                             <div className="Container">
-                               {console.log(user)} 
-                            <Login/>
-                             
-                            
+                                
+                            <div>HEllo master</div>
+                                    
                             </div>
                                
+                        </Route>
+                        <Route path="/login">
+                        <div className="Container">
+                        <Login/>
+                            </div>
+                            
+                        </Route>
+                        <Route path="/admin">
+                        <div className="Container">
+                            <Admin/> 
+                            </div>
                         </Route>
                         <Route path="/about">
                         <div className="Container">

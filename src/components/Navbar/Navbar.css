@@ -21,6 +21,7 @@
 }
 .nav-style{
   text-decoration: none;
+  cursor: pointer;
   color: white;
   outline: none;
   text-align:center;

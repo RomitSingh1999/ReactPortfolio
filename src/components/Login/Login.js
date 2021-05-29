@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import fire from './fire'
+import {BrowserRouter as Route,Switch,Redirect} from "react-router-dom"
 import "./Login.css"
 
 
@@ -88,14 +89,15 @@ const Login=()=>{
 
 
 return(
-
+    
     <div className="login-container">
         {user ? (
             <>
-                <h3>
-                Welcome 
-            </h3>
-            <button onClick={handlelogout}>Logout</button>
+               <Route>
+                   <Switch>
+                   <Redirect from='/login/' to="//" />
+                   </Switch>
+               </Route>
             </>
             
         ):(
@@ -103,24 +105,25 @@ return(
             <h3>Login Here</h3>
         <label>Username: </label>
         <input type="text" autoFocus className="input-box" value={email} onChange={(e)=>{setemail(e.target.value)}} />
-        <p>{emailerr}</p>
+        <p style={{color:"red"}}>{emailerr}</p>
         <label>Password: </label>
         <input type="text" required className="input-box" value={password} onChange={(e)=>{setpassword(e.target.value)}} />
-        <p>{passworderr}</p>
+        <p style={{color:"red"}}>{passworderr}</p>
         <div className="btnContainer">
             {hasaccount ? (
                 <>
-                <button onClick={handlelogin}>
+                <button className="btn-style" onClick={handlelogin}>
                     Sign In
                 </button>
-                <p>Don't have an account<span onClick={()=>{sethasaccount(!hasaccount)}}>Sign Up</span></p>
+                <p>Don't have an account &nbsp;
+                    <span style={{cursor:"pointer",color:"blue",}} onClick={()=>{sethasaccount(!hasaccount)}}>Sign Up</span></p>
                 </>
                 ):(
                     <>
-                    <button onClick={handlesignup} >
+                    <button className="btn-style" onClick={handlesignup} >
                         Sign Up
                     </button>
-                    <p>have an account! <span onClick={()=>{sethasaccount(!hasaccount)}}>Sign In</span></p>
+                    <p>Have an account!&nbsp;<span style={{cursor:"pointer",color:"blue",}} onClick={()=>{sethasaccount(!hasaccount)}}>Sign In</span></p>
                     </>
                 )}
                 </div>

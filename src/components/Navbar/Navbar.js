@@ -1,10 +1,13 @@
 import React from 'react'
 import './Navbar.css'
+import Login from "../Login/Login"
 import {BrowserRouter as Router,Link} from 'react-router-dom'
 
 
 const Navbar=(props)=>
 {
+    const {user,handlelogout}= props;
+    console.log(user,"hi");
     return (
         <div className="Nav">
             <Router>
@@ -17,6 +20,18 @@ const Navbar=(props)=>
             <div className="nav-style">
             <a className="nav-style" href="/contact">Contact</a>
             </div>
+            {user? (
+                <>
+            <div className="nav-style">
+            <a className="nav-style" href="/admin">Admin</a>
+            </div>
+            <div className="nav-style">
+            <a className="nav-style" onClick={handlelogout}>Logout</a>
+            </div></>
+            ):(<div className="nav-style">
+            <a className="nav-style"href="/login">Login</a> 
+            </div>)}
+            
             <div className="nav-style">
             <a className="nav-style" href="/profile">Profile</a>
             </div>

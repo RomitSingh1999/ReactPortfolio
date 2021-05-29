@@ -4,3 +4,11 @@
 .Container{
     margin-top: 50px;
 }
+.btn-style{
+    outline:none;
+    background: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 2px 1px 3px 1px rgb(109, 108, 108);
+}

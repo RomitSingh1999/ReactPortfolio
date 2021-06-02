@@ -1,9 +1,9 @@
 import './App.css';
 import React,{useState} from 'react';
 // import Layout from './components/Layout/layout';
-import Burger from './components/Burger/Burger';
+// import Burger from './components/Burger/Burger';
 import Navbar from './components/Navbar/Navbar';
-import Home from './components/Home/Home'
+// import Home from './components/Home/Home'
 import About from './components/About/About'
 import Admin from './components/Admin/Admin'
 
@@ -14,10 +14,12 @@ import Login from './components/Login/Login'
 import {BrowserRouter as Router,Switch, Route} from 'react-router-dom'
 import fire from './components/Login/fire';
 
-const App=(props)=>{
 
+const App=(props)=>{
+    const data=JSON.stringify(fire.auth());
+    const newdata=JSON.parse(data)
         const [user,setuser]=useState('')
-        
+        console.log(newdata.currentUser? ("user exist"):("user doesnot exist"))
         
         
             fire.auth().onAuthStateChanged((user)=>{
@@ -29,6 +31,7 @@ const App=(props)=>{
                 else
                 setuser("");
             })
+            
             const handlelogout=()=>{
                 fire.auth().signOut();
             };
@@ -38,11 +41,15 @@ const App=(props)=>{
             <Router>
                 <Navbar user={user} handlelogout={handlelogout}/>
             <div className = "App" >
+            <div className="Container">
+                                
+                                        
+                                </div>
                     
                     
                     <Switch>
                     
-                        <Route path="/" exact >
+                        <Route exact path="/"  >
                             <div className="Container">
                                 
                             <div>HEllo master</div>
@@ -51,9 +58,10 @@ const App=(props)=>{
                                
                         </Route>
                         <Route path="/login">
-                        <div className="Container">
-                        <Login/>
-                            </div>
+                            {user?(<></>):(<div className="Container">
+                            <Login/>
+                            </div>)}
+                        
                             
                         </Route>
                         <Route path="/admin">

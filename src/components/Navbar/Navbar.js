@@ -2,12 +2,11 @@ import React from 'react'
 import './Navbar.css'
 import Login from "../Login/Login"
 import {BrowserRouter as Router,Link} from 'react-router-dom'
-
+import fire from "../Login/fire"
 
 const Navbar=(props)=>
 {
     const {user,handlelogout}= props;
-    console.log(user,"hi");
     return (
         <div className="Nav">
             <Router>

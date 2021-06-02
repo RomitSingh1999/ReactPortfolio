@@ -1,6 +1,6 @@
 
 .login-container{
-    background: linear-gradient(white,rgb(43, 193, 252),rgb(13, 115, 231));
+    background: linear-gradient(rgb(135, 153, 236),rgb(255, 255, 255));
     align-items: center;
     margin:auto;
     min-width:300px;

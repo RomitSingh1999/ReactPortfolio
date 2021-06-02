@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import fire from './fire'
 import {BrowserRouter as Route,Switch,Redirect} from "react-router-dom"
 import "./Login.css"
+// import axios from 'axios'
 
 
 const Login=()=>{
@@ -87,7 +88,7 @@ const Login=()=>{
     });
 
 
-
+console.log(JSON.stringify(fire.auth()).currentUser);
 return(
     
     <div className="login-container">
@@ -95,14 +96,14 @@ return(
             <>
                <Route>
                    <Switch>
-                   <Redirect from='/login/' to="//" />
+                    <Redirect from='/login/' to="/" />
                    </Switch>
                </Route>
             </>
             
         ):(
             <>
-            <h3>Login Here</h3>
+            <h3 style={{color:"#fff"}}>Login Here</h3>
         <label>Username: </label>
         <input type="text" autoFocus className="input-box" value={email} onChange={(e)=>{setemail(e.target.value)}} />
         <p style={{color:"red"}}>{emailerr}</p>
@@ -112,7 +113,7 @@ return(
         <div className="btnContainer">
             {hasaccount ? (
                 <>
-                <button className="btn-style" onClick={handlelogin}>
+                <button className="btn-style" type="submit" onClick={handlelogin}>
                     Sign In
                 </button>
                 <p>Don't have an account &nbsp;
@@ -120,7 +121,7 @@ return(
                 </>
                 ):(
                     <>
-                    <button className="btn-style" onClick={handlesignup} >
+                    <button className="btn-style" type="submit"onClick={handlesignup} >
                         Sign Up
                     </button>
                     <p>Have an account!&nbsp;<span style={{cursor:"pointer",color:"blue",}} onClick={()=>{sethasaccount(!hasaccount)}}>Sign In</span></p>

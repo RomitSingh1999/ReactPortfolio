@@ -1,28 +1,37 @@
 import React,{useState} from 'react'
 import "./projects.css"
+// import ReactPlayer from "react-player"
 
-export default function Projects() {
+export default function Projects(props) {
 
 
     const [projectData,setProjectData]= useState({
-        Data:"hello there mate"
+        id: props.id,
+        projectName:props.projectName,
+        shortDesc: props.shortDesc,
+        fullDesc: props.fullDesc
     })
-    console.log(projectData.Data.length);
+    
+ 
+    
     return (
         <>
         <div className="card">
-            <div className="project-heading">
-                Projects            
+            <div className="project-heading" >
+                {projectData.projectName}            
             </div>
 
             <div className="project-short-desc">
-
+            {projectData.shortDesc} 
             </div>
 
-            <div className="project-desc">
-                {projectData.Data.length ? projectData.Data :<h4>Nothing here for you</h4>}
+            <div className="project-desc" >
+            {projectData.fullDesc} 
             </div>
+
         </div>
+        
+
         
         
         </>

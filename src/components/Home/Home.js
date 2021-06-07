@@ -6,13 +6,15 @@ const Home=()=>{
     return (
         <>
         
-        <div className="container">
+        <div className="Container">
             <div className="heading">
                 <h2>Hello there Mate</h2>
                 <span>Welcome, let us start our trip</span>
             </div>
-            <div className="Content">
-                
+            <div className="container">
+                <div className="card">
+
+                </div>
             </div>
         </div>
     

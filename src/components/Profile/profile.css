@@ -1,12 +1,15 @@
 .container{
     width:100%;
-    background: linear-gradient(rgb(78, 140, 211) 40%,white);
+    
 
 }
 
 .profile-heading{
     margin:10px;
-    color:white;
+    font-size: x-large;
+    font-weight: 400;
+    color:rgb(248, 250, 252);
+    
 
 }
 .profile-items{

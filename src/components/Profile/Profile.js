@@ -7,6 +7,7 @@ import ReactPlayer from "react-player"
 import useSwr,{SWRConfig} from "swr"
 import fire from "../Login/fire"
 import axios from "axios"
+import {RiHome4Line} from "react-icons/ri";
 const Profile=()=>{
     
     
@@ -33,10 +34,10 @@ const Profile=()=>{
     return (
         <>
     
-        <div className="container" >
+        <div className="container" style={{background:"linear-gradient(rgb(93, 168, 243),#fff)"}}>
         <div className="bg-image">
         <div className="profile-heading">
-                <h2 >Welcome to my Profile</h2>
+                <span><RiHome4Line /></span> | Welcome to my Profile
             </div>
             <div className="container">
             <Education/>

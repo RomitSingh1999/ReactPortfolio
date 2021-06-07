@@ -69,11 +69,6 @@ const App=(props)=>{
                             <Admin/> 
                             </div>
                         </Route>
-                        <Route path="/about">
-                        <div className="app-Container">
-                            <About/> 
-                            </div>
-                        </Route>
                         <Route path="/contact" >
                         <div className="app-Container">
                         <Testform/>

@@ -1,12 +1,10 @@
 
 
 .Container{
-    background-image: url("./1G-Computer_ScienceCsIT_Software_Engineering.png");
-    
-   
-    /* Center and scale the image nicely */
+    background: url("./1G-Computer_ScienceCsIT_Software_Engineering.png");
+    height:100%;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
     width: 100%;
     align-items: center;
@@ -16,7 +14,6 @@
   
 }
 @media screen and (max-width:500px) {
-    .Container{width:400px;}
     .Content{width:400px;}
 }
 .heading{
@@ -24,8 +21,9 @@
     text-shadow: 3px 3px 2px #504e4e;
     padding: 10px;
 }
-
-.Content{
-    width:100%;
-    height:600px;
+.Content-body{
+    margin:50px;
+    float: left;
+    display: flex;
 }
+

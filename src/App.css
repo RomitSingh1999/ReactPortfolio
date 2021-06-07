@@ -1,7 +1,11 @@
 .App{
     text-align: center;
+    height:100%;
+    margin:0px;
+    background-color: rgb(59, 57, 57);
+    height:100%;
 }
-.Container{
+.app-Container{
     margin-top: 50px;
 }
 .btn-style{

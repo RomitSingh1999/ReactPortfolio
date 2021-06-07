@@ -1,27 +1,37 @@
 
 .card{
-    
-    border-radius: 15px; 
-    margin:50px;
-    width:50%;
-    min-width:fit-content;
-    height:400px;
-    background:url('./bg-image-ani.png');
-    background-size:100% 100% ;
-    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
-      transition: .1s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
-  padding: 14px 80px 18px 36px;
-  cursor: pointer;
+  background: none;
+  padding: 10px;
+  border: rgb(136, 221, 196) solid 2px;
+  background-color: rgb(66, 63, 63);
+  width:18rem;
+  height:20rem;
+  overflow: inherit;
+  border-radius: 6px;
+   margin:10px;
+   transition: .001s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
 }
 
 .card:hover{
+  overflow: auto;
+  width:25rem;
      transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+.card-title{
+  padding: 4px;
+  font-size: larger;
+}
+.card-text{
+  margin: 5px;
+}
+.card-body{
+  margin:2px;
 }
 .project-heading{
     font-size: larger;
     font-weight: 550;
-    color: #fff;
+    color: rgb(124, 120, 120);
 }
 .project-desc{
   color:#fff;

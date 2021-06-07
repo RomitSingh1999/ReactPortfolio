@@ -1,7 +1,7 @@
 import './App.css';
 import React,{useState} from 'react';
 // import Layout from './components/Layout/layout';
-// import Burger from './components/Burger/Burger';
+import Home from './components/Home/Home';
 import Navbar from './components/Navbar/Navbar';
 // import Home from './components/Home/Home'
 import About from './components/About/About'
@@ -41,7 +41,7 @@ const App=(props)=>{
             <Router>
                 <Navbar user={user} handlelogout={handlelogout}/>
             <div className = "App" >
-            <div className="Container">
+                            <div className="app-Container">
                                 
                                         
                                 </div>
@@ -50,38 +50,38 @@ const App=(props)=>{
                     <Switch>
                     
                         <Route exact path="/"  >
-                            <div className="Container">
+                            <div className="app-Container">
                                 
-                            <div>HEllo master</div>
+                            <Home/>
                                     
                             </div>
                                
                         </Route>
                         <Route path="/login">
-                            {user?(<></>):(<div className="Container">
+                            {user?(<></>):(<div className="app-Container">
                             <Login/>
                             </div>)}
                         
                             
                         </Route>
                         <Route path="/admin">
-                        <div className="Container">
+                        <div className="app-Container">
                             <Admin/> 
                             </div>
                         </Route>
                         <Route path="/about">
-                        <div className="Container">
+                        <div className="app-Container">
                             <About/> 
                             </div>
                         </Route>
                         <Route path="/contact" >
-                        <div className="Container">
+                        <div className="app-Container">
                         <Testform/>
                             </div>
                         
                         </Route>
                         <Route path="/profile" >
-                        <div className="Container">
+                        <div className="app-Container">
                         <Profile/>
                             </div>
                         </Route>

@@ -2,8 +2,7 @@ import React,{useState,useEffect} from 'react'
 import "./Admin.css"
 import fire from "../Login/fire"
 import { useForm } from "react-hook-form";
-import { FormText } from 'react-bootstrap';
-
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 export default function Admin() {
 const database=fire.database()
 const { register, handleSubmit } = useForm();
@@ -33,29 +32,32 @@ const allitems=()=>{
         <div className="admin-bg">
 
             <div className="Admin-Container">
-              <h2>
+              
                   Admin Page
+                <div className="form-container">
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <p>
                     
+                    <div className="form-group">
+                    <input className="form-control"  type="text-box" {...register("projectName")} placeholder="Project Name" />
+
+                    </div>
+                    <div className="form-group">
+                    <input className="form-control" {...register("shortDesc")} placeholder="Short Description" />
+
+                    </div>
                     
-                    <input className="input-field" type="text-box" {...register("projectName")} placeholder="Project Name" />
-                    
-                    </p>
-                    <p>
-                    <input id="input-field-short" {...register("shortDesc")} placeholder="Short Description" />
-                 
-                    </p>
-                    <p>
-                    <textarea id="input-field-full" type="text" {...register("fullDesc")} placeholder="Full Description" />                     
-                    </p>
-                    <input className="btn" onClick={clearStuff} type="submit" />
-                </form>
-                </h2>  
+                    <div className="form-group">
+                    <textarea className="form-control" type="text" {...register("fullDesc")} placeholder="Full Description" />                     
+
+                    </div>
+                    <button type="submit" class="btn btn-primary"  onClick={clearStuff}>Submit</button>
+                </form> 
+                </div>
+                
             </div>
-            <div>
+        
             
-            </div>
+            
         </div>
     )
 }

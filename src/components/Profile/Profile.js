@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import "./profile.css"
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import Education from "./education"
 import Projects from "./projects"
 import ReactPlayer from "react-player"
@@ -11,7 +12,7 @@ const Profile=()=>{
     
     const database=fire.database()
     const adminDataJson= database.ref('admin/projects');
-     var [items,setitems]=useState({})
+    var [items,setitems]=useState({})
     
     useEffect(()=>{
         
@@ -32,12 +33,12 @@ const Profile=()=>{
     return (
         <>
     
-        <div className="profile-container" >
+        <div className="container" >
         <div className="bg-image">
         <div className="profile-heading">
                 <h2 >Welcome to my Profile</h2>
             </div>
-            <div className="profile-items">
+            <div className="container">
             <Education/>
             
             

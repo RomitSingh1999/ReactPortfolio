@@ -24,7 +24,7 @@ export default function Projects(props) {
             <div className="card-img-top" src={{URL:"bg-image.jpg"}} alt="Card image cap" />
             
             <div className="card-title" style={{color:"rgb(19,25, 110)",fontSize:"2rem",fontWeight:"bold"}} >
-                <a href="#"><span><FaGithub color="white" /></span></a><Typed
+                <a href="https://github.com/RomitSingh1999/ReactPortfolio"><span><FaGithub color="white" /></span></a><Typed
                 strings={[projectData.projectName]}
                 typeSpeed={100}
                 backSpeed={10}

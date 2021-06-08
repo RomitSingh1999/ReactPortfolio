@@ -26,4 +26,21 @@
     float: left;
     display: flex;
 }
+.skills-element{
+
+    
+    font-size: x-large;
+    font:bold;
+    text-shadow: 3px 3px 2px #504e4e;
+    color: aliceblue;
+} span{
+    margin:10px;
+}
+.skills-element span:hover{
+    cursor: pointer;
+    font-size: x-large;
+    text-shadow: 2px 1px 1px #741d1d;
+    color: rgb(255, 79, 79);
+    font:bold;
+}
 

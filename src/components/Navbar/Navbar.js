@@ -1,14 +1,27 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Navbar.css'
 import Login from "../Login/Login"
 import {BrowserRouter as Router,Link} from 'react-router-dom'
-import fire from "../Login/fire"
+
 
 const Navbar=(props)=>
 {
     const {user,handlelogout}= props;
+    const [navbar,setnavbar]=useState(true);
+    const navClick=()=>{
+        setnavbar(!navbar);
+    }
     return (
         <div className="Nav">
+            <div className="nav-bars">
+                {navbar?(
+                    <i className="fa fa-bars" onClick={navClick}/>
+                ):(
+                    <i className="fa fa-times" onClick={navClick}/>
+                )}
+                
+
+                </div>
             <Router>
             <div className="nav-style">
             <a className="nav-style" href="/">Home</a>

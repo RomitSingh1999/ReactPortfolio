@@ -31,4 +31,20 @@
 
 .nav-style:hover{
   color:rgb(189, 189, 189);
+  text-decoration: none;
+  background-color: rgb(92, 167, 190);
+  border-radius: 4px;
+  transition: 400ms;
 }
+.nav-bars{
+    margin:2px;
+    cursor:pointer;
+}
+@media  screen and (max-width:462px) {
+  
+  .nav-bars.active{
+    display: none;
+  }
+  
+}
+

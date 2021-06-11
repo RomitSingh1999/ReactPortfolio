@@ -26,6 +26,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-typed": "^1.2.0",
+    "socket.io": "^4.1.2",
     "swr": "^0.5.6",
     "web-vitals": "^1.1.1"
   },
@@ -52,5 +53,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "optionalDependencies": {
+    "bufferutil": "^4.0.3",
+    "utf-8-validate": "^5.0.5"
   }
 }

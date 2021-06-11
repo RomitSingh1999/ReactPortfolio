@@ -17,9 +17,11 @@
     .Content{width:400px;}
 }
 .heading{
-    color:aliceblue;
+    margin-top: 100px;
+    width: auto;
+    color:rgb(235, 235, 236);
     text-shadow: 3px 3px 2px #504e4e;
-    padding: 10px;
+    padding: auto;
 }
 .Content-body{
     margin:50px;
@@ -27,12 +29,12 @@
     display: flex;
 }
 .skills-element{
-
-    
+    margin-top: 50px;
+    position: relative;
     font-size: x-large;
     font:bold;
     text-shadow: 3px 3px 2px #504e4e;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
 } span{
     margin:10px;
 }
@@ -43,4 +45,33 @@
     color: rgb(255, 79, 79);
     font:bold;
 }
+.profile-image{
+    position:relative;
+    padding:100px;
+    background: url("8WGn.png");
+    background-size: cover;
+    background-position: center;
+    width:100px;
+    height:100px;
+  border-radius: 50%;
+    text-align: end;
+  object-fit: cover;
+  object-position: center right;
+}
+.profile-image p{
+    margin-left:100px;
+    color: rgb(245, 240, 240);
+    text-decoration: underline tomato;
+    font-size: 50px;
+    font-family:fantasy;
+}
+.profile-imgcont{
+    margin-left:25%;
+    width:300px;
+
+    background-color: #504e4e 0.5;
+    text-align: end;
+    position:relative;
+}
+
 
